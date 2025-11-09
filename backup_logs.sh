@@ -1,10 +1,11 @@
 #!/bin/bash
-DATE=$(date +%Y%m%d)
-BACKUP_DIR="/backup/logs"
-ARCHIVE_NAME="logs_$DATE.tar"
-ARCHIVE_PATH="$BACKUP_DIR/$ARCHIVE_NAME"
-COMPRESSED_ARCHIVE="$ARCHIVE_PATH.gz"
-LOG_DIR="/var/log"
+source "config.cfg"
+DATE=$DATE
+BACKUP_DIR="$BACKUP_DIR"
+ARCHIVE_NAME=$ARCHIVE_NAME
+ARCHIVE_PATH=$ARCHIVE_PATH
+COMPRESSED_ARCHIVE=$COMPRESSED_ARCHIVE
+LOG_DIR="$LOG_DIR"
 
 echo "Espace disque disponible :"
 df -h /
@@ -20,11 +21,11 @@ for file in "$LOG_DIR"/*; do
     fi
 done
 
-tar -cvf "$ARCHIVE_PATH" "${LOG_FILES[@]}"
+tar -czpvf "$ARCHIVE_PATH" "${LOG_FILES[@]}"
 
-gzip "$ARCHIVE_PATH"
+gzip -f "$ARCHIVE_PATH"
 
-find "$BACKUP_DIR" -type f -name "logs_*.tar.gz" -mtime +7 -exec rm {} \
+find "$BACKUP_DIR" -type f -name "logs_*.tar.gz" -mtime +7 -exec rm {} \;
 
 echo "Rapport de sauvegarde :"
 ARCHIVE_SIZE=$(du -h "$COMPRESSED_ARCHIVE" | cut -f1)
@@ -36,6 +37,3 @@ echo " - Archive : $(basename "$COMPRESSED_ARCHIVE")"
 echo " - Taille : $ARCHIVE_SIZE"
 echo " - Taux de compression : $COMPRESSION_RATE%"
 echo " - Fichiers sauvegardés : ${#LOG_FILES[@]}"
-
-exit 0
-

@@ -1,0 +1,31 @@
+2025-11-09T19:19:17.316228+01:00 Apach2 crontab[8226]: (tsekomos) LIST (tsekomos)
+2025-11-09T19:25:30.574971+01:00 Apach2 crontab[8248]: (tsekomos) BEGIN EDIT (tsekomos)
+2025-11-09T19:28:28.835424+01:00 Apach2 crontab[8248]: (tsekomos) REPLACE (tsekomos)
+2025-11-09T19:28:28.838569+01:00 Apach2 crontab[8248]: (tsekomos) END EDIT (tsekomos)
+2025-11-09T19:29:01.864692+01:00 Apach2 cron[535]: (tsekomos) RELOAD (crontabs/tsekomos)
+2025-11-09T19:29:01.872380+01:00 Apach2 CRON[8257]: (tsekomos) CMD (echo "Cron test $(date)" >> /home/tsekomos/cron_test.log)
+2025-11-09T19:30:01.889779+01:00 Apach2 CRON[8271]: (root) CMD ([ -x /etc/init.d/anacron ] && if [ ! -d /run/systemd/system ]; then /usr/sbin/invoke-rc.d anacron start >/dev/null; fi)
+2025-11-09T19:30:01.891056+01:00 Apach2 CRON[8272]: (tsekomos) CMD (echo "Cron test $(date)" >> /home/tsekomos/cron_test.log)
+2025-11-09T19:31:01.906397+01:00 Apach2 CRON[8287]: (tsekomos) CMD (echo "Cron test $(date)" >> /home/tsekomos/cron_test.log)
+2025-11-09T19:32:01.921230+01:00 Apach2 CRON[8302]: (tsekomos) CMD (echo "Cron test $(date)" >> /home/tsekomos/cron_test.log)
+2025-11-09T19:33:01.955636+01:00 Apach2 anacron[8318]: Anacron 2.3 started on 2025-11-09
+2025-11-09T19:33:01.957076+01:00 Apach2 anacron[8318]: Normal exit (0 jobs run)
+2025-11-09T19:33:01.958435+01:00 Apach2 CRON[8319]: (tsekomos) CMD (echo "Cron test $(date)" >> /home/tsekomos/cron_test.log)
+2025-11-09T19:33:23.815743+01:00 Apach2 crontab[8333]: (tsekomos) BEGIN EDIT (tsekomos)
+2025-11-09T19:33:50.376057+01:00 Apach2 crontab[8333]: (tsekomos) REPLACE (tsekomos)
+2025-11-09T19:33:50.376304+01:00 Apach2 crontab[8333]: (tsekomos) END EDIT (tsekomos)
+2025-11-09T19:34:01.963929+01:00 Apach2 cron[535]: (tsekomos) RELOAD (crontabs/tsekomos)
+2025-11-09T19:34:11.920428+01:00 Apach2 crontab[8338]: (tsekomos) BEGIN EDIT (tsekomos)
+2025-11-09T19:34:16.315865+01:00 Apach2 crontab[8338]: (tsekomos) END EDIT (tsekomos)
+2025-11-09T20:17:01.052558+01:00 Apach2 CRON[9676]: (root) CMD (cd / && run-parts --report /etc/cron.hourly)
+2025-11-09T20:30:01.086405+01:00 Apach2 CRON[9685]: (root) CMD ([ -x /etc/init.d/anacron ] && if [ ! -d /run/systemd/system ]; then /usr/sbin/invoke-rc.d anacron start >/dev/null; fi)
+2025-11-09T20:35:12.794998+01:00 Apach2 anacron[9719]: Anacron 2.3 started on 2025-11-09
+2025-11-09T20:35:12.799901+01:00 Apach2 anacron[9719]: Normal exit (0 jobs run)
+2025-11-09T21:50:46.086837+01:00 Apach2 anacron[579]: Anacron 2.3 started on 2025-11-09
+2025-11-09T21:50:46.086895+01:00 Apach2 anacron[579]: Normal exit (0 jobs run)
+2025-11-09T21:50:46.086916+01:00 Apach2 cron[590]: (CRON) INFO (pidfile fd = 3)
+2025-11-09T21:50:46.087159+01:00 Apach2 cron[590]: (CRON) INFO (Running @reboot jobs)
+2025-11-09T21:51:16.204448+01:00 Apach2 systemd-timesyncd[494]: Contacted time server 194.57.169.1:123 (2.debian.pool.ntp.org).
+2025-11-09T21:51:16.204931+01:00 Apach2 systemd-timesyncd[494]: Initial clock synchronization to Sun 2025-11-09 21:51:15.890900 CET.
+2025-11-09T21:51:54.069827+01:00 Apach2 anacron[1778]: Anacron 2.3 started on 2025-11-09
+2025-11-09T21:51:54.070776+01:00 Apach2 anacron[1778]: Normal exit (0 jobs run)
